@@ -3,6 +3,7 @@ package org.tlh.nasa.test;
 import org.junit.Test;
 import org.tlh.nasa.entity.Train;
 import org.tlh.nasa.enums.DirectionEnum;
+import static org.junit.Assert.assertEquals;
 
 public class TrainTest {
 
@@ -13,8 +14,7 @@ public class TrainTest {
         for (int i=0;i<commands.length();i++){
             train.move(commands.charAt(i));
         }
-
-        System.out.println(train);
+        assertEquals(train,new Train(1,3,DirectionEnum.NORTH));
     }
 
     @Test
@@ -25,8 +25,7 @@ public class TrainTest {
         for (int i=0;i<commands.length();i++){
             train.move(commands.charAt(i));
         }
-
-        System.out.println(train);
+        assertEquals(train,new Train(5,1,DirectionEnum.EAST));
     }
 
 }

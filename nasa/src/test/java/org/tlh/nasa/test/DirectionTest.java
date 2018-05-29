@@ -3,6 +3,7 @@ package org.tlh.nasa.test;
 import org.junit.Test;
 import org.tlh.nasa.enums.DirectionEnum;
 
+import static org.junit.Assert.assertEquals;
 import static org.tlh.nasa.enums.DirectionEnum.*;
 
 public class DirectionTest {
@@ -10,29 +11,29 @@ public class DirectionTest {
     @Test
     public void north(){
         DirectionEnum north = NORTH;
-        System.out.println(north.left());
-        System.out.println(north.right());
+        assertEquals(WEST,north.left());
+        assertEquals(EAST,north.right());
     }
 
     @Test
     public void east(){
         DirectionEnum east = EAST;
-        System.out.println(east.left());
-        System.out.println(east.right());
+        assertEquals(NORTH,east.left());
+        assertEquals(SOUTH,east.right());
     }
 
     @Test
     public void south(){
         DirectionEnum south = SOUTH;
-        System.out.println(south.left());
-        System.out.println(south.right());
+        assertEquals(EAST,south.left());
+        assertEquals(WEST,south.right());
     }
 
     @Test
     public void west(){
         DirectionEnum west = WEST;
-        System.out.println(west.left());
-        System.out.println(west.right());
+        assertEquals(SOUTH,west.left());
+        assertEquals(NORTH,west.right());
     }
 
 }

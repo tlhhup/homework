@@ -22,6 +22,12 @@ public class Train {
         this.y = y;
     }
 
+    public Train(int x, int y, DirectionEnum direction) {
+        this.x = x;
+        this.y = y;
+        this.direction = direction;
+    }
+
     public void move(char command) {
         //1.先判定是否是转弯
         if (command == 'L') {//左转
