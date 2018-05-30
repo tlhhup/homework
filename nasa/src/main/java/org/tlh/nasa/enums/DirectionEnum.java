@@ -5,30 +5,30 @@ package org.tlh.nasa.enums;
  */
 public enum DirectionEnum {
 
-    NORTH,EAST,SOUTH,WEST;
+    N, E, S, W;
 
-    public DirectionEnum left(){
+    public DirectionEnum left() {
         int ordinal = this.ordinal();
         ordinal--;
-        if(ordinal<0){
-            ordinal+=4;
+        if (ordinal < 0) {
+            ordinal += 4;
         }
         return findByOrdinal(ordinal);
     }
 
-    public DirectionEnum right(){
+    public DirectionEnum right() {
         int ordinal = this.ordinal();
         ordinal++;
-        ordinal%=4;
+        ordinal %= 4;
         return findByOrdinal(ordinal);
     }
 
-    private DirectionEnum findByOrdinal(int ordinal){
-        DirectionEnum direction=null;
+    private DirectionEnum findByOrdinal(int ordinal) {
+        DirectionEnum direction = null;
         DirectionEnum[] values = values();
-        for (DirectionEnum value:values){
-            if(value.ordinal()==ordinal){
-                direction=value;
+        for (DirectionEnum value : values) {
+            if (value.ordinal() == ordinal) {
+                direction = value;
                 break;
             }
         }

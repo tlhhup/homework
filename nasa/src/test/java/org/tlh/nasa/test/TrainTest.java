@@ -14,18 +14,18 @@ public class TrainTest {
         for (int i=0;i<commands.length();i++){
             train.move(commands.charAt(i));
         }
-        assertEquals(train,new Train(1,3,DirectionEnum.NORTH));
+        assertEquals(train,new Train(1,3,DirectionEnum.N));
     }
 
     @Test
     public void move2(){
         Train train=new Train(3,3);
-        train.setDirection(DirectionEnum.EAST);
+        train.setDirection(DirectionEnum.E);
         String commands="MMRMMRMRRM";
         for (int i=0;i<commands.length();i++){
             train.move(commands.charAt(i));
         }
-        assertEquals(train,new Train(5,1,DirectionEnum.EAST));
+        assertEquals(train,new Train(5,1,DirectionEnum.E));
     }
 
 }

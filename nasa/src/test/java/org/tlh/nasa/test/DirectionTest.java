@@ -10,30 +10,30 @@ public class DirectionTest {
 
     @Test
     public void north(){
-        DirectionEnum north = NORTH;
-        assertEquals(WEST,north.left());
-        assertEquals(EAST,north.right());
+        DirectionEnum north = N;
+        assertEquals(W,north.left());
+        assertEquals(E,north.right());
     }
 
     @Test
     public void east(){
-        DirectionEnum east = EAST;
-        assertEquals(NORTH,east.left());
-        assertEquals(SOUTH,east.right());
+        DirectionEnum east = E;
+        assertEquals(N,east.left());
+        assertEquals(S,east.right());
     }
 
     @Test
     public void south(){
-        DirectionEnum south = SOUTH;
-        assertEquals(EAST,south.left());
-        assertEquals(WEST,south.right());
+        DirectionEnum south = S;
+        assertEquals(E,south.left());
+        assertEquals(W,south.right());
     }
 
     @Test
     public void west(){
-        DirectionEnum west = WEST;
-        assertEquals(SOUTH,west.left());
-        assertEquals(NORTH,west.right());
+        DirectionEnum west = W;
+        assertEquals(S,west.left());
+        assertEquals(N,west.right());
     }
 
 }

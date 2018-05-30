@@ -11,8 +11,8 @@ public class Train {
 
     private int x;
     private int y;
-    private DirectionEnum direction = DirectionEnum.NORTH;
-    private boolean moving;
+    private DirectionEnum direction = DirectionEnum.N;
+    private String commands;
 
     public Train() {
     }
@@ -39,20 +39,28 @@ public class Train {
         //2.移动
         if (command == 'M') {
             switch (direction) {
-                case NORTH:
+                case N:
                     this.y++;
                     break;
-                case EAST:
+                case E:
                     this.x++;
                     break;
-                case SOUTH:
+                case S:
                     this.y--;
                     break;
-                case WEST:
+                case W:
                     this.x--;
                     break;
             }
         }
     }
 
+    @Override
+    public String toString() {
+        return "Train{" +
+                "x=" + x +
+                ", y=" + y +
+                ", direction=" + direction +
+                '}';
+    }
 }
